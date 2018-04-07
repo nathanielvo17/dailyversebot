@@ -1,6 +1,6 @@
 import requests, json, os, urllib.request
 
-with urllib.request.urlopen("http://labs.bible.org/api/?passage=votd&type=json") as url:
+with urllib.request.urlopen("http://labs.bible.org/api/?passage=random&type=json") as url:
     data = json.loads(url.read().decode())
     print(data[0]["bookname"] + " " + data[0]["chapter"] + ":" + data[0]["verse"] + " " + data[0]["text"])
 
@@ -13,7 +13,7 @@ text = data[0]["text"]
 
 
 post = book + " " + chapter + ":" + verse + " " + '\n' + text
-data = { 'bot_id' : '43db4c5290a3c0996f7220df31',
+data = { 'bot_id' : os.getenv('GROUPME_BOT_ID'),
          'text': post }
 requests.post('https://api.groupme.com/v3/bots/post',
               params = data)
