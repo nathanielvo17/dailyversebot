@@ -1,6 +1,6 @@
 import requests, json, os, urllib.request
 
-with urllib.request.urlopen("http://labs.bible.org/api/?passage=random&type=json") as url:
+with urllib.request.urlopen("http://labs.bible.org/api/?passage=votd&type=json") as url:
     data = json.loads(url.read().decode())
 print(data)
     
