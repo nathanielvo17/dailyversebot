@@ -14,7 +14,7 @@ highTempK = weather["main"]["temp_max"]
 lowTempF = str(int(9 / 5 * lowTempK - 459.67))
 highTempF = str(int(9 / 5 * highTempK - 459.67))
 
-weatherOutput = "The weather in Tulsa, OK is: " + '\n' + '\t' + descriptionCaps + ", with a High of " + highTempF + "°F and a Low of " + lowTempF + "°F"
+weatherOutput = "The Weather in Tulsa, OK is: " + '\n' + '\t' + descriptionCaps + ", with a High of " + highTempF + "°F and a Low of " + lowTempF + "°F"
 print(weatherOutput)
 book = data[0]["bookname"]
 chapter = data[0]["chapter"]
