@@ -30,5 +30,5 @@ if len(data) > 1:
 post = {"content":" %s %s:%s ~ \n %s \n " % (book, chapter, verse, text)}
 #output = { 'bot_id' : os.getenv('GROUPME_BOT_ID'),
 #         'text': post }
-url = 'https://discordapp.com/api/webhooks/687473631093456971/zFZfrmhukLhLIwj5uqZBhhZGemdqv64TFbQnewf6_aDoOy1eiN20MwZEaEOXol3A0e1M'
+url = 'https://discordapp.com/api/webhooks/687524254178082876/svxvv9Ee-9jCoN-tEnPBx2yesWEASFboNkp9FV8HUL4sryV-_noZYBQWoZzU2rAMyqOz'
 req = requests.post(url, post)
