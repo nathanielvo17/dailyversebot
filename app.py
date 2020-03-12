@@ -27,8 +27,8 @@ if len(data) > 1:
     for i in range(1, len(data)):
         text += " %s %s" % (data[i]["verse"], data[i]["text"])
 
-post = " %s %s:%s ~ \n \t %s \n %s " % (book, chapter, verse, text, weatherOutput)
-output = { 'bot_id' : os.getenv('GROUPME_BOT_ID'),
-         'text': post }
-requests.post('https://api.groupme.com/v3/bots/post',
-              params = output)
+post = {"content":" %s %s:%s ~ \n %s \n " % (book, chapter, verse, text)}
+#output = { 'bot_id' : os.getenv('GROUPME_BOT_ID'),
+#         'text': post }
+url = 'https://discordapp.com/api/webhooks/687473631093456971/zFZfrmhukLhLIwj5uqZBhhZGemdqv64TFbQnewf6_aDoOy1eiN20MwZEaEOXol3A0e1M'
+req = requests.post(url, post)
